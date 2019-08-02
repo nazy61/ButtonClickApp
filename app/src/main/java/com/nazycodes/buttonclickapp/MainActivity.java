@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity {
         View.OnClickListener ourOnClickListener = new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String result = userInput.getText().toString();
-                result = result + "\n";
-                textView.append(result);
-                userInput.setText("");
+                if(!userInput.getText().toString().isEmpty()){
+                    String result = userInput.getText().toString();
+                    result = result + "\n";
+                    textView.append(result);
+                    userInput.setText("");
+                }
             }
         };
 
